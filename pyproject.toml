@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "garminWorkout"
+version = "0.0.0"
+description = "Create garmin workouts from json/yaml"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+
+authors = [
+  { name = "Rhys Taus", email = "rhystaus2@gmail.com" }
+]
+
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "mplhep",
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Sports and Fitness Enthusiasts",
+  "Topic :: Sports :: Fitness",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "black",
+  "ruff",
+  "mypy",
+]
+schema = [
+  "pydantic>=2.0"
+]
+
+[project.scripts]
+garminWorkout = "garminWorkout.cli:main"
