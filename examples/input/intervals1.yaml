@@ -1,0 +1,24 @@
+# Interval workout example
+
+
+name: "Interval Workout"
+description: "5x60s intervals"
+
+workout:
+  - step: warmup
+
+    duration_type: lap button press
+    intensity_target: None
+
+  - step: interval
+    repeat: 5
+    duration_type: Time
+    duration: 60 # seconds
+    intensity_target_type: Pace
+    intensity_target: [5:30, 6:00] # pace range in min/km
+    recovery_type: Time
+    recovery: 30 # seconds
+
+  - step: cooldown
+    duration_type: lap button press
+    intensity_target: None
